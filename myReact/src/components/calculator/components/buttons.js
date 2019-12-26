@@ -54,14 +54,14 @@ class Button extends Component {
             const val = this.props.value.numShow + number;
             changeState({
                     numShow: val,
-                    result: Number(val)
+                    result: (Math.round(parseFloat(val) * 100000) / 100000)
                 }
             )
         } else {  /*无原先值*/
             const val = this.props.value.num + number;
             changeState({
                 num: val,
-                result: Number(val)
+                result:(Math.round(parseFloat(val) * 100000) / 100000)
             })
         }
 
@@ -73,24 +73,24 @@ class Button extends Component {
                 // 先判断符号
                 switch (this.props.value.symbols) {
                     case '+' :
-                        let valOne = Number(this.props.value.num) + Number(this.props.value.numShow);
+                        let valOne = parseFloat(this.props.value.num) + parseFloat(this.props.value.numShow);
                         this.calResult(valOne);
                         break;
                     case '-' :
-                        let valTwo = Number(this.props.value.num) - Number(this.props.value.numShow);
+                        let valTwo = parseFloat(this.props.value.num) - parseFloat(this.props.value.numShow);
                         this.calResult(valTwo);
                         break;
                     case 'x' :
-                        let valThree = Number(this.props.value.num) * Number(this.props.value.numShow);
+                        let valThree = parseFloat(this.props.value.num) * parseFloat(this.props.value.numShow);
                         this.calResult(valThree);
                         break;
                     case '÷' :
-                        let valFour = Number(this.props.value.num) / Number(this.props.value.numShow);
+                        let valFour = parseFloat(this.props.value.num) / parseFloat(this.props.value.numShow);
                         this.calResult(valFour);
 
                         break;
                     case '%' :
-                        let valFive = Number(this.props.value.num) % Number(this.props.value.numShow);
+                        let valFive = parseFloat(this.props.value.num) % parseFloat(this.props.value.numShow);
                         this.calResult(valFive);
                         break;
                 }
@@ -148,7 +148,7 @@ class Button extends Component {
         setTimeout(() => {
             changeState({
                 loading: false,
-                result: Number(val),
+                result: parseFloat(val),
                 num: val,
                 numShow: 0,
             })
