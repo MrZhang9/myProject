@@ -1,0 +1,15 @@
+export const SHOW_CAL='show_cal';
+export const SHOW_LIST='show_list';
+export const NUMBER_INPUT_ONE='number_input_one';
+export const NUMBER_INPUT_TWO='number_input_two';
+export const CLEAR_ALL='clear_all';
+export const NUMBER_REVERSE_NUMSHOW ='number_reverse_numShow';
+export const NUMBER_REVERSE_NUM='number_reverse_num';
+export const SHOW_LOADING='show_loading';
+export const HIDE_LOADING='hide_loading';
+export const SYMBOLS='symbols';
+export const ORIGINAL_STATE='original_state';
+export const INIT_LIST='init_list';
+export const CHANGE_PAGESIZE='change_page';
+export const PREV_PAGE='prev_page';
+export const NEXT_PAGE='next_page';
