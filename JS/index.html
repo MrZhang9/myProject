@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+<!--头部-----------------------------------------------------------------开始-->
+<header>
+    <div class="img"><img src="img/plane.png" alt=""></div>
+    <p class="word">每天进步一点点， 离目标更近一点点！</p>
+    <div class="right">
+        <span class="dhq">段惠乾</span>
+        <span class="exit">退出</span>
+    </div>
+</header>
+<!--头部-----------------------------------------------------------------结束-->
+
+<!--导航栏---------------------------------------------------------头部-->
+<nav>
+    <ul class="z-nav">
+        <li id="firstpage">首页</li>
+        <li id="income" class="active">收入分析</li>
+        <li>营销转化分析 <span>α</span></li>
+        <li>广告管理</li>
+        <li>统计分析</li>
+        <li>用户管理</li>
+        <li>便捷工具</li>
+    </ul>
+</nav>
+<div class="line"></div>
+<!--导航栏---------------------------------------------------------尾部-->
+
+
+<!--计算器主体-------------------------------------------------------------头部-->
+<div class="cal" id="cal">
+    <input type="text" id="res" readOnly="true" value="0">
+    <ol class="ul">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <div id="body">
+        <input type="button" id="reset" value="AC">
+        <input type="button" id="reverse" value="+/-">
+        <input type="button" id="per" value="%">
+        <input type="button" id="div" value="÷">
+
+        <input class="number" type="button" id="seven" value="7">
+        <input class="number" type="button" id="eight" value="8">
+        <input class="number" type="button" id="nine" value="9">
+        <input type="button" id="mul" value="x">
+
+
+        <input class="number" type="button" id="four" value="4">
+        <input class="number" type="button" id="five" value="5">
+        <input class="number" type="button" id="six" value="6">
+        <input type="button" id="reduce" value="-">
+
+        <input class="number" type="button" id="one" value="1">
+        <input class="number" type="button" id="two" value="2">
+        <input class="number" type="button" id="three" value="3">
+        <input type="button" id="add" value="+">
+
+        <input type="button" id="zero" value="0">
+        <input type="button" id="dot" value=".">
+        <input type="button" id="equal" value="=">
+    </div>
+    <div id="foot">
+        <span id="demo"></span>
+    </div>
+    <div class="box none" id="box">
+        <div class="loading"></div>
+    </div>
+</div>
+<!--计算器主体---------------------------------------尾部-->
+
+<div class="money" id="money">
+    <!--查询部分--------------------------------------------------------头部-->
+    <div>
+        <form class="form" action="">
+            <div class="jy">
+                <select>
+                    <option value="交易">交易</option>
+                </select>
+            </div>
+            <div class="fy">
+                <select id="select">
+                    <option value="7">7</option>
+                    <option value="6">6</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                </select>
+            </div>
+            <div class="date">
+                <span>日期选择</span><input id="stime" type="date"> - <input id="etime" type="date">
+            </div>
+            <div class="cxtb">
+                <span id="find">查询</span>
+                <span id="tongbu">同步</span>
+            </div>
+            <div class="text">
+                <span>交易上次手动同步时间：2019-09-25 10:09:36</span>
+            </div>
+        </form>
+
+    </div>
+    <!--查询部分-------------------------------------------------------------------------------------尾部-->
+
+    <!--表格——------------------------------------------------------------------------------------头部-->
+
+    <table class="table" id="table" cellspacing="0">
+        <thead>
+        <tr>
+            <td>日期</td>
+            <td>付费人数</td>
+            <td>免费人数</td>
+            <td>客单价</td>
+            <td>总收入</td>
+            <td>到期(人)</td>
+            <td>新订(单)</td>
+            <td>续订(单)</td>
+            <td>升级(单)</td>
+            <td>后台(单)</td>
+            <td>续订率</td>
+            <td>一个月(单)</td>
+            <td>一季度(单)</td>
+            <td>半年(单)</td>
+            <td>一年(单)</td>
+            <td>来源</td>
+        </tr>
+        </thead>
+        <tbody id="tb">
+        </tbody>
+    </table>
+
+    <!--表格——-----------------------------------------------------------------------尾部-->
+
+    <!--翻页--------------------------------------------------------------------头部-->
+    <div class="page" id="page">
+        <button id="prepage">上一页</button>
+        <span id="numone">1</span>/<span id="numtwo">1</span>
+        <button id="nextpage">下一页</button>
+    </div>
+
+    <!--翻页---------------------------------------------------------------------------尾部-->
+
+</div>
+</body>
+</html>
